@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div id="navbar">
+          <img src="./resources/EMS.svg" />
+          <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+          <button class="cart-btn" onclick="openForm()">
+            <img src="./resources/cart.svg" style="width:40px"; /><span id="cart-number">0</span>
+          </button>
+        </div>
+
+        <div id="banner">
+          <h1>
+            THE <br />
+            E-MILLENIAL<br />
+            STORE
+          </h1>
+          <img src="./resources/heroImage.png" />
+        </div>
+        <button id="btn"><a href="#shop">SHOP NOW</a></button>
+      </div>
+
+      <div class="form-popup" id="myForm">
+        <form method="POST" class="form-container">
+          <ul>
+            <li>S/N</li>
+            <li>Item</li>
+            <li>price</li>
+            <li>Quantity</li>
+          </ul>
+          <div id="item-info"></div>
+
+          <label for="name"></label>
+          <input type="text" placeholder="Your Name" id="user_name" name="name" required />
+
+          <label for="email"></label>
+          <input type="email" id="user_email" placeholder="Your Email" name="email" required />
+
+          <label for="phoneNumber"></label>
+          <input type="tel" placeholder="Your Phone Number" id="user_tel" name="phoneNumber" required />
+
+          <h4>Total Amount to be paid</h4>
+
+          <h4 id="total-amount">$0</h4>
+
+          <button type="button" class="continue form-btn" onclick="closeForm()">
+            Continue Shopping
+          </button>
+          <button type="submit"  class="checkout form-btn">Checkout</button>
+        </form>
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+        <!-- <script src="https://code.jquery.com/j.query-1.12.4.min.js"></script>
+        <script src="https://js.paystack.co/v1/paystack.js"></script> -->
+      </div>
+
+      <!-- <div id="summary-box">
+
+      </div> -->
+
+
+      <div id="About">
+        <p>
+          E-Millenial Store is an hypothetical online store for gadgets we
+          believe every 'Millenial' or 'Gen-Z' should have today. We've got
+          mobile phones, laptops, smartwatches and other gadgets. Explore all
+          our gadgets and choose the ones that suit you.
+        </p>
+      </div>
+
+      <div class="heading">
+        <h2>OUR GADGETS</h2>
+      </div>
+
+      <div id="shop">
+        <div class="row1">
+          <div class="product">
+            <div class="thumbnail1">
+              <div class="overlay"><h3 id="tv-price">Price: $500</h3></div>
+            </div>
+            <!-- <img src="./resources/product1.png" alt="SAMSUNG TV" /> -->
+            <h2 class="item">SAMSUNG TV</h2>
+            <button type="button" id="SAMSUNG TV button" onclick="updateCartPrice(500)" class="addCart">ADD TO CART</button>
+          </div>
+
+          <div class="product">
+            <div class="thumbnail2">
+              <div class="overlay"><h3 id="phone-price">Price: $400</h3></div>
+            </div>
+            <!-- <img src="./resources/product2.png" alt="Google Pixel 4a" /> -->
+            <h2 class="item">PIXEL 4a</h2>
+            <button type="button" id="PIXEL 4a button" onclick="updateCartPrice(400)" class="addCart">ADD TO CART</button>
+          </div>
+
+          <div class="product">
+            <div class="thumbnail3">
+              <div class="overlay"><h3 id="ps-price">Price: $750</h3></div>
+            </div>
+            <!-- <img src="./resources/product3.png" alt="PS5" /> -->
+            <h2 class="item">PS5</h2>
+            <button type="button" id="PS5 button" onclick="updateCartPrice(750)" class="addCart">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="product">
+            <div class="thumbnail4">
+              <div class="overlay"><h3 id="mac-price">Price: $700</h3></div>
+            </div>
+            <!-- <img src="./resources/product4.png" alt="Macbook Air" /> -->
+            <h2 class="item">MACBOOK AIR</h2>
+            <button type="button" id="MACBOOK AIR button" onclick="updateCartPrice(700)" class="addCart">ADD TO CART</button>
+          </div>
+
+          <div class="product">
+            <div class="thumbnail5">
+              <div class="overlay"><h3 id="apple-price">Price: $200</h3></div>
+            </div>
+            <!-- <img src="./resources/product5.png" alt="Apple Watch" /> -->
+            <h2 class="item">APPLE WATCH</h2>
+            <button type="button" id="APPLE WATCH button" onclick="updateCartPrice(200)" class="addCart">ADD TO CART</button>
+          </div>
+
+          <div class="product">
+            <div class="thumbnail6">
+              <div class="overlay"><h3 id="airpod-price">Price: $250</h3></div>
+            </div>
+            <!-- <img src="./resources/product6.png" alt="Airpods" /> -->
+            <h2 class="item">AIR PODS</h2>
+            <button type="button" id="AIR PODS button" onclick="updateCartPrice(250)" class="addCart">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <img src="./resources/EMS.svg" />
+        <p>Designed by a Frontend Baby</p>
+        <p>&copy; 2020 Capstone & Sarah</p>
+      </footer>
+    </div>
+  </body>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</html>
